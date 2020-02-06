@@ -3,7 +3,7 @@ import { Route, useLocation } from 'react-router-dom'
 import Container from '@material-ui/core/Container'
 import * as routes from '../routes'
 import Home from '../pages/Home'
-import Header from '../components/Navbar'
+import Header from '../components/Header'
 
 const Layout = () => {
   let location = useLocation()
