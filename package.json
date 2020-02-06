@@ -4,12 +4,17 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "latest",
+    "@material-ui/icons": "^4.9.1",
+    "@types/classnames": "^2.2.9",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-router-dom": "^5.1.3",
+    "node-sass": "^4.13.1",
     "react": "latest",
     "react-dom": "latest",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "latest",
-    "typescript": "latest"
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
