@@ -14,7 +14,6 @@ export default function Todo(){
 	
 	return(
 		<div className = "TodoWrapper">
-			<Header/>
 			<div className = "Todo">
 				<TodoSubmit 
 					todoList = {todoList}
