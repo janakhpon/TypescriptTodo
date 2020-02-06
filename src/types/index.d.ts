@@ -1,19 +1,21 @@
 export type TodoType = {
-    id: number;
-    text: string;
+	id : number;
+	content : string;
+	completed : boolean;
 }
 
-export interface TodoListProps {
-    todoList: TodoType[];
-    handleTodoList: (todo) => void;
+export interface TodoListProps{
+	todoList : TodoType[];
+	handleTodoList : (todo)=>void;
 }
 
-export interface TodoItemProps {
-    todo: TodoType;
-    deleteTodo: (id) => void;
+export interface TodoItemProps{
+	todo : TodoType;
+	deleteTodo : (id) => void;
+	completeTodo : (id) => void;
 }
 
-export interface TodoSubmitProps {
-    todoList: TodoType[];
-    handleTodoList: (todo) => void;
+export interface TodoSubmitProps{
+	todoList : TodoType[];
+	handleTodoList : (todo)=>void;
 }
