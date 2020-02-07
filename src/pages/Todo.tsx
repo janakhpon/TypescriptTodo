@@ -11,7 +11,6 @@ import 'styles/Todo.scss';
 
 export default function Todo() {
 	const [todoList, handleTodoList] = useState<TodoType[]>([]);
-
 	return (
 		<div className="TodoWrapper">
 			<div className="Todo">
@@ -23,10 +22,17 @@ export default function Todo() {
 						/>
 					</Grid>
 				</Grid>
-
-				<TodoList
-					todoList={todoList}
-					handleTodoList={handleTodoList} />
+				<Grid container className="container-spacing">
+					<Grid item >
+					</Grid>
+				</Grid>
+				<Grid container spacing={1} justify="center" className="container-form">
+					<Grid item xs={12} md={10}>
+						<TodoList
+							todoList={todoList}
+							handleTodoList={handleTodoList} />
+					</Grid>
+				</Grid>
 			</div>
 		</div>
 	)
