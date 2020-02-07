@@ -20,7 +20,7 @@ export default function Router() {
 			{
 				location.pathname !== `${routes.LANDING}` && <Header />
 			}
-			<Container maxWidth="md">
+			<Container maxWidth="md" className="layout">
 				<Switch>
 					<Route
 						exact

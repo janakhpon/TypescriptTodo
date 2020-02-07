@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Grid from '@material-ui/core/Grid'
 import { TodoType } from 'types';
 
 // components
@@ -14,10 +15,15 @@ export default function Todo() {
 	return (
 		<div className="TodoWrapper">
 			<div className="Todo">
-				<TodoForm
-					todoList={todoList}
-					handleTodoList={handleTodoList}
-				/>
+				<Grid container spacing={1} justify="center" className="container-form">
+					<Grid item xs={12} md={10}>
+						<TodoForm
+							todoList={todoList}
+							handleTodoList={handleTodoList}
+						/>
+					</Grid>
+				</Grid>
+
 				<TodoList
 					todoList={todoList}
 					handleTodoList={handleTodoList} />
