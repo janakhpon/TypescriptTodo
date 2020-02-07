@@ -8,17 +8,26 @@ import Header from './components/Header'
 
 // Pages
 import Todo from 'pages/Todo';
+import Landing from 'pages/Landing';
+
+// SCSS
+import 'styles/Layout.scss'
 
 export default function Router() {
 	let location = useLocation()
 	return (
 		<>
-		{
-			location.pathname !== `${routes.HOME}` && <Header />
-		}
+			{
+				location.pathname !== `${routes.LANDING}` && <Header />
+			}
 			<Container maxWidth="md">
 				<Switch>
-					<Route path="/" component={Todo} />
+					<Route
+						exact
+						path={routes.LANDING}
+						component={() => <Landing />}
+					/>
+					<Route exact path={routes.HOME} component={() => <Todo />} />
 				</Switch>
 			</Container>
 		</>
