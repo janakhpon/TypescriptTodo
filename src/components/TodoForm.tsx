@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TodoFormProps, TodoType } from 'types';
-
+import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
@@ -18,22 +18,29 @@ export default function TodoSubmit({ todoList, handleTodoList }: TodoFormProps) 
 	}
 
 	return (
-		<div className="TodoSubmit">
+		<>
 			<form onSubmit={(e) => e.preventDefault()}>
-				<TextField
-					className="SubmitInput"
-					label="Your task here ... "
-					type="search"
-					onChange={(e) => handleTodoInput(e.target.value)} />
+				<Grid container spacing={1} justify="center">
+					<Grid item xs={8}>
+						<TextField
+							className="SubmitInput"
+							label="Your task here ... "
+							type="search"
+							fullWidth
+							onChange={(e) => handleTodoInput(e.target.value)} />
+					</Grid>
+					<Grid item xs={3}>
+						<Button
+							className="SubmitButton"
+							variant="contained"
+							color="secondary"
+							onClick={() => addTodo(todoInput)}>
+							save
+					</Button>
+					</Grid>
 
-				<Button
-					className="SubmitButton"
-					variant="contained"
-					color="secondary"
-					onClick={() => addTodo(todoInput)}>
-					save
-				</Button>
+				</Grid>
 			</form>
-		</div>
+		</>
 	)
 }

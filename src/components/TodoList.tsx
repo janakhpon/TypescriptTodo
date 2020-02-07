@@ -5,7 +5,10 @@ import {
 	TodoItemProps,
 } from 'types';
 
-import DeleteIcon from '@material-ui/icons/Delete';
+import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button'
 
 export default function TodoList({ todoList, handleTodoList }: TodoListProps) {
 	const deleteTodo = (id: number) => {
@@ -40,13 +43,30 @@ export default function TodoList({ todoList, handleTodoList }: TodoListProps) {
 function TodoItem({ todo, deleteTodo, completeTodo }: TodoItemProps) {
 
 	return (
-		<div className="TodoItem">
-			<p className="id">{todo.id}</p>
-			<p className="content" onClick={() => completeTodo(todo.id)}>{todo.content}</p>
-			<p className="completed">{todo.completed ? "O" : "X"}</p>
-			<DeleteIcon
-				className="deleteButton"
-				onClick={() => deleteTodo(todo.id)} />
-		</div>
+		<>
+			<Grid container spacing={1} justify="center" className="container-item">
+				<Grid item xs={6}>
+					<p className="content" onClick={() => completeTodo(todo.id)}>{todo.content}</p>
+				</Grid>
+				<Grid item xs={3}>
+					<Button
+						type="submit"
+						fullWidth
+						variant="contained"
+						color="primary"
+						onClick={() => deleteTodo(todo.id)}
+					>update</Button>
+				</Grid>
+				<Grid item xs={3}>
+					<Button
+						type="submit"
+						fullWidth
+						variant="contained"
+						color="primary"
+						onClick={() => deleteTodo(todo.id)}
+					>remove</Button>
+				</Grid>
+			</Grid>
+		</>
 	)
 }
