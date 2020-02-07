@@ -15,7 +15,7 @@ export interface TodoItemProps{
 	completeTodo : (id) => void;
 }
 
-export interface TodoSubmitProps{
+export interface TodoFormProps{
 	todoList : TodoType[];
 	handleTodoList : (todo)=>void;
 }
