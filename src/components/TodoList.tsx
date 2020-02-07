@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	TodoType,
 	TodoListProps,
 	TodoItemProps,
 } from 'types';
 
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button'
 
+import axios from 'axios'
+
+
 export default function TodoList({ todoList, handleTodoList }: TodoListProps) {
+
+
+
+
 	const deleteTodo = (id: number) => {
 		const deleteTodoList = todoList.filter((todo: TodoType) => todo.id !== id);
 		handleTodoList(deleteTodoList);
