@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { TodoType } from 'types';
 
 // components
-import Header from 'components/Header';
 import TodoList from 'components/TodoList';
 import TodoSubmit from 'components/TodoSubmit';
 
