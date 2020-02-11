@@ -16,6 +16,7 @@ export default function TodoList({ todoList, handleTodoList }: TodoListProps) {
 
 
 
+
 	const deleteTodo = (id: number) => {
 		const deleteTodoList = todoList.filter((todo: TodoType) => todo.id !== id);
 		handleTodoList(deleteTodoList);
