@@ -28,7 +28,7 @@ const PageList = () => {
     }, [])
     
     return (
-        <Grid container spacing={2} className={styles.container}>
+        <Grid container spacing={4} className={styles.container}>
             <Grid item xs={12} className={styles.listform}>
                 <PageListForm />
             </Grid>
