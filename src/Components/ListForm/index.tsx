@@ -54,7 +54,7 @@ function PageListForm() {
     return (
         <Grid container spacing={2} className={styles.container}>
             <Grid item xs={12}>
-                <TextField id="input-with-icon-grid" label="search for context" fullWidth
+                <TextField id="input-with-icon-grid" label="todo task/context here ..." fullWidth
                     InputProps={{ className: classes.underline }} InputLabelProps={{ className: classes.formLabel }} className={styles.searchbox}
                     onChange={(e) => setText(e.target.value)} onKeyPress={(e) => {
                         if (e.key === 'Enter') {
