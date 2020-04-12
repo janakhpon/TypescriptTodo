@@ -5,6 +5,7 @@ import Container from '@material-ui/core/Container'
 import * as routes from '../../Constants'
 import Navbar from '../Navbar'
 import PageList from '../List'
+import PageContextList from '../ContextList'
 import Page404 from '../404'
 
 import styles from './index.module.scss'
@@ -22,6 +23,7 @@ function Header() {
                     <Container fixed>
                     <Switch>
                         <Route exact path={routes.PAGE_LIST} component={() => <PageList />} />
+                        <Route exact path={routes.PAGE_CONTEXT_LIST} component={() => <PageContextList />} />
                         <Route exact path={routes.PAGE_404} component={() => <Page404 />} />
                     </Switch>
                     </Container>
